@@ -1,0 +1,12 @@
+Sweep and Prune Algoritm:
+1. Create a  AABB struct that takes as pointer the X axis projection.
+
+2.Create the AABB Sorted array with a max number.
+
+3. Create the active list where to save the current's AABB structs.
+
+4. Create method that handle the  appendement of the objects in the active list.
+
+5. call the intersection test of the objects in the active list.
+
+6. Update the Active List.
