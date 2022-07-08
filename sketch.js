@@ -3,7 +3,7 @@ let sap ;
 let n = prompt("How many Particles?");
 function setup(){
     frameRate(30)
-    createCanvas(700,700).center("horizontal")
+    createCanvas(700,700)
     for(let i = 0; i < n; i++){
         particles.push(new Particle(random(width),random(height),10, color(random(255), random(255), random(255))))
     }
