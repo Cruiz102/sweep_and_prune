@@ -6,6 +6,8 @@ class Particle{
         this.color = color
         this.ax =  this.position.x - this.radius
         this.bx = this.position.x + this.radius
+        this.delta = 50;
+        this.stage = 0;
 
     }
 
@@ -21,31 +23,34 @@ class Particle{
     }
     // create a function that reversed velocity of the particle when touching a boundary
     Walls(){
-        if(this.position.x < 0 || this.position.x > 500){
+        if(this.position.x < 0 || this.position.x > width){
             this.velocity.x *= -1
         }
-        if(this.position.y < 0 || this.position.y > 500){
+        if(this.position.y < 0 || this.position.y > height){
             this.velocity.y *= -1
         }
     }
 
+    
+
+
+
+    
+
     // create a intersection method for the particle
     intersects(particle){
         let distance = p5.Vector.dist(this.position, particle.position)
-        if(distance <= this.radius + particle.radius){
-            return  true
-        }
-    
+        if(distance <= this.radius + particle.radius ){
+            return  true}
+        else{
         return false
+        }
     }
-
+    
     // Create a function that change the direction of the particle
-
-
-    changeColor(particle){
-        let c = color(255, 255, 255)
-        this.color = c
-        particle.color = c
+    changeColor(particle, color){
+        this.color = color
+        particle.color = color
 
     }
 

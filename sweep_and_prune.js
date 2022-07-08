@@ -17,7 +17,10 @@ class SAP{
         for(let i = 0; i < this.active.length; i++){
             for(let j = i + 1; j < this.active.length; j++){
                 if(this.active[i].intersects(this.active[j])){
-                    this.active[i].changeColor(this.active[j])
+                    this.active[i].changeColor(this.active[j], color(255,0,0))
+                }
+                else{
+                 
                 }
             }
         }
